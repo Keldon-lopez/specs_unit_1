@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Square from './Square.jsx';
+import { useState } from 'react';
+
 
 function App() {
-  let keldon = 'keldon is kinda kool';
+  const [square, setSquare] = useState(['','','','','','','','','']);
+  const [player, setPlayer] = useState(true);
   return (
     <div className="App">
-      <Square propVar={keldon}></Square>
+      <Square square={square} setSquare={setSquare} player={player} setPlayer={setPlayer}></Square>
     </div>
   );
 }
