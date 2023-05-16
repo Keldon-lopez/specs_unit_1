@@ -8,8 +8,16 @@ function App() {
   const [squares, setSquares] = useState(['','','','','','','','','']);
   const [player, setPlayer] = useState(true);
 
+  const handleClick = () =>{
+    setSquares(['','','','','','','','','']);
+    setPlayer(true);
+    console.log(squares);
+    console.log(player)
+  }
+
   return (
     <div className="App">
+      <button onClick={handleClick}>Reset</button>
       <div className='container'>
         {squares.map((value,index) => {
           return <Square squares={squares} setSquares={setSquares} player={player} setPlayer={setPlayer} squareValue={value} index={index}></Square>
